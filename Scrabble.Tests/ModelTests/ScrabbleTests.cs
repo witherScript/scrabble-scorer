@@ -30,5 +30,12 @@ namespace Scrabble.Tests
       char[] wordArr = newScrabble.GetArray(newScrabble.Input);
       Assert.AreEqual(typeof(char[]), wordArr.GetType()); 
     }
+    [TestMethod]
+    public void GetScore_ShouldCalcScoreFromWord_Int()
+    {
+      WordScore newScrabble = new WordScore("star");
+      int expected =4;
+      Assert.AreEqual(expected, newScrabble.CalcScore());
+    }
   }
 }
